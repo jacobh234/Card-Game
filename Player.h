@@ -18,6 +18,8 @@ public:
     std::string str() const;
     void draw(PlayingCard);
     std::vector<PlayingCard> getHand() const;
+    int getHandSize() const;
+    PlayingCard removeCard(int index);
 
 };
 

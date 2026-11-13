@@ -28,3 +28,16 @@ void Player::draw(PlayingCard dr)
 {
     hand.push_back(dr);
 }
+
+int Player::getHandSize() const 
+{
+    return hand.size(); // Replace 'hand' with whatever your vector is named in Player.h
+}
+
+PlayingCard Player::removeCard(int index) 
+{
+    PlayingCard chosen = hand.at(index);
+    hand.erase(hand.begin() + index);
+    return chosen;
+}
+
