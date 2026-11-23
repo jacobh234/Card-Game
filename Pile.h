@@ -1,14 +1,17 @@
 #pragma once
 #include <vector>
-#include "PlayingCard.h"
+#include "playingCard.h"
 
-class Pile {
-private:
-    std::vector<PlayingCard> cards;
+class Pile
+{
+    private:
+        std::vector<PlayingCard> cards;
+    public:
+        Pile();
+        void addCard(PlayingCard card);
 
-public:
-    void addCard(PlayingCard c);
-    PlayingCard getTopCard() const;
-    std::vector<PlayingCard> takeAll();
-    int size() const;
+        //i spent 20 minutes on here arguing with chatgpt why bjarn decided to require you return the contents rather than the name
+        //return cards wouldve logically made more sense
+        // 1st reason pythons better
+        std::vector<PlayingCard> grabPile();
 };

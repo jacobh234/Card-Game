@@ -1,28 +1,31 @@
+
 {
+    "version": "2.0.0",
     "tasks": [
         {
-            "type": "cppbuild",
-            "label": "C/C++: g++.exe build all files",
+            "type": "process",
+            "label": "C/C++: g++.exe build active file",
             "command": "C:\\msys64\\ucrt64\\bin\\g++.exe",
             "args": [
                 "-fdiagnostics-color=always",
                 "-g",
-                "${fileDirname}\\*.cpp",
+                "${fileDirname}\\CardDriver.cpp",
+                "${fileDirname}\\bs.cpp",
+                "${fileDirname}\\pile.cpp",
+                "${fileDirname}\\Player.cpp",
+                "${fileDirname}\\DeckOfCards.cpp",
+                "${fileDirname}\\PlayingCard.cpp",
                 "-o",
                 "${fileDirname}\\CardDriver.exe"
             ],
             "options": {
                 "cwd": "${fileDirname}"
             },
-            "problemMatcher": [
-                "$gcc"
-            ],
+            "problemMatcher": ["$gcc"],
             "group": {
                 "kind": "build",
                 "isDefault": true
-            },
-            "detail": "Builds all .cpp files in the folder."
+            }
         }
-    ],
-    "version": "2.0.0"
+    ]
 }

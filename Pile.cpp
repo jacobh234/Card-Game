@@ -1,19 +1,14 @@
-#include "Pile.h"
+#include "pile.h"
 
-void Pile::addCard(PlayingCard c) {
-    cards.push_back(c);
+Pile::Pile()
+{}
+
+void Pile::addCard(PlayingCard card)
+{
+    cards.push_back(card);
 }
 
-PlayingCard Pile::getTopCard() const {
-    return cards.back();
-}
-
-std::vector<PlayingCard> Pile::takeAll() {
-    std::vector<PlayingCard> allCards = cards;
-    cards.clear();
-    return allCards;
-}
-
-int Pile::size() const {
-    return cards.size();
+std::vector<PlayingCard> Pile::grabPile() 
+{
+    return cards;
 }
